@@ -39,3 +39,7 @@ sudo usermod -aG docker $USER
 ```
 docker --version
 ```
+
+## Reference
+- [Docker Documentation](https://docs.docker.com)
+- [Abhisek's blog](https://abhisek6.hashnode.dev/docker-for-devops-engineers)
