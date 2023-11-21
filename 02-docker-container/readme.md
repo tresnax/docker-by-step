@@ -10,6 +10,11 @@ docker run -p 8080:80 -d php:7.2-apache
 - -p 80:80 : Maksudnya menjalankan forward untuk port 8080 komputer kita ke 80 container yang kita jalankan.
 - -d : Maksudnya menjalankan proses kedalam backgorund, kamu bisa coba hilangkan bagian ini apabila ingin melihat prosesnya.
 
+Menjalankan Container dengan memberikan nama pada container
+```
+docker run -p 8080:80 -d --name webserver php:7.2-apache
+```
+
 ## Melihat Container yang berjalan
 ```
 docker ps

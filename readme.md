@@ -43,3 +43,4 @@ docker --version
 ## Reference
 - [Docker Documentation](https://docs.docker.com)
 - [Abhisek's blog](https://abhisek6.hashnode.dev/docker-for-devops-engineers)
+- [Linux ID](https://www.linuxid.net/31073/cara-membuat-docker-images-dengan-dockerfile/)
