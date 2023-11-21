@@ -45,6 +45,9 @@ NAME        IMAGE                   COMMAND                  SERVICE   CREATED  
 webserver   webserver:1.0-tresnax   "/bin/sh -c 'apachec…"   web       44 seconds ago   Up 43 seconds   0.0.0.0:8080->80/tcp
 ```
 
+Setelah muncul seperti diatas, silahkan check menggunakan browser pada komputer anda dengan menekan **http://localhost:8080** atau **http://127.0.0.1:8080**.
+
+
 ## Mematikan Docker Compose
 Pastikan kamu berada pada direktori tempat menyimpan file **docker-compose.yaml** tersebut, lalu berikan perintah :
 ```

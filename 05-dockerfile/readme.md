@@ -66,6 +66,9 @@ CONTAINER ID   IMAGE                   COMMAND                  CREATED         
 7e5fc42db8ae   webserver:1.0-tresnax   "/bin/sh -c 'apachec…"   2 seconds ago   Up 1 second   0.0.0.0:8080->80/tcp   webserver
 ```
 
+Setelah muncul seperti diatas, silahkan check menggunakan browser pada komputer anda dengan menekan **http://localhost:8080** atau **http://127.0.0.1:8080** Maka akan muncul informasi php dari phpinfo.
+
+
 ## Command on Dockerfile
 Berikut beberapa command dalam dockerfile yang dapat kamu temukan atau gunakan pada case berikutnya :
 - ARG = Instruksi ini digunakan untuk menentukan variabel yang dapat dilewati saat build-time. Kamu juga dapat menentukan nilai default.
@@ -83,7 +86,6 @@ Berikut beberapa command dalam dockerfile yang dapat kamu temukan atau gunakan p
 - EXPOSE = Digunakan untuk menentukan port tempat Container berjalan saat runtime.
 
 <br>
-<br>
 
 # Challange !
 
@@ -95,6 +97,7 @@ Setelah kamu mempelajari tentang dockerfile, sekarang kita coba untuk membuat se
 5. Jalankan perintah **node** dan **app.js** pada saat container dijalankan
 6. Build docker image dengan nama todolist 
 7. Jalankan container dengan parameter name sesuai nama kamu dan port host sesuai yang kamu inginkan
+8. Check apps melalui browser untuk memastikan semuanya berjalan dengan baik
 
 <br>
 
