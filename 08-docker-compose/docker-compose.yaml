@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    image: webserver:1.0-tresnax
+    container_name: webserver
+    ports:
+      - "8080:80"

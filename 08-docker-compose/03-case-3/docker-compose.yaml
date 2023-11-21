@@ -1,0 +1,23 @@
+version: '3'
+services:
+  apps_sensor:
+    image: webserver:1.0-tresnax
+    container_name: app_sensor
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/var/www/html/
+    #command: bash -c "apache2-foreground"
+  
+  data_sensor:
+    image: mysql:5.7
+    container_name: db_sensor
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: c0c0d0tb4u
+      MYSQL_DATABASE: db_warriornux
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
+    

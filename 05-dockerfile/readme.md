@@ -37,6 +37,7 @@ EXPOSE 80
 - CMD = Untuk menjalankan command pada awal container dijalankan
 - RUN = fungsinya untuk mengeksekusi perintah pada saat image dibuat
 - EXPOSE = mendefinisikan port yang digunakan oleh container saat runtime
+- DEBIAN_FRONTEND=noninteractive = Command ini digunakan untuk mematikan frontend bagi image base debian/ubuntu, tapi jika kamu menggunakan image lain yang bukan base maka bisasanya tidak perlu.
 
 
 ## Menjalankan Dockerfile (Membuat Image Docker)
