@@ -15,7 +15,7 @@ Untuk struktur dari dockerfile yang akan kita buat adalah sebagai berikut :
 ```
 |______Dockerfile
 |______web
-		|___index.php
+        |___index.php
 ```
 
 Sedangkan isi dari dockerfilenya adalah sebagai berikut :
