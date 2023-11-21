@@ -33,8 +33,6 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plug
 sudo usermod -aG docker $USER
 ```
 
-## Perintah Docker
-
 **Melihat Versi**
 ```
 docker --version
