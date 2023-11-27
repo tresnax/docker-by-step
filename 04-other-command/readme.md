@@ -26,5 +26,5 @@ docker top <container_id>
 
 Menghapus selutuh container yang ada (container yang mati)
 ```
-docker ps -a | awk '{ print $1,$2 }' |  awk '{print $1 }' | xargs -I {} docker rm {} &
+docker ps -a | awk '{ print $1,$2 }' |  awk '{print $1 }' | xargs -I {} docker rm {}
 ```
