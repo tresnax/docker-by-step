@@ -47,7 +47,7 @@ local     mydata
 
 Selanjutnya mounting pada container baru yang akan kita jalankan :
 ```
-docker run -d --mount source=datapertama,target=/opt/data --name webserver webserver:1.0-tresnax
+docker run -d --mount source=datapertama,target=/opt/data --name webserver php:7.2-apache
 ```
 
 Masuk kedalam container yang sudah kita jalankan dan buat beberapa file untuk kita test :
@@ -65,7 +65,7 @@ ls /opt/data/
 
 Sekarang kita coba lakukan sharing volume dengan container lain, buat container baru dengan target mounting ***/opt/database/*** lalu check hasilnya :
 ```
-docker run -d --mount source=datapertama,target=/opt/database --name webserver2 webserver:1.0-tresnax
+docker run -d --mount source=datapertama,target=/opt/database --name webserver2 php:7.2-apache
 docker exec -it webserver2 bash
 ls /opt/database/
 ```
