@@ -1,0 +1,41 @@
+#  Service -----------------------------------------------------------
+services:
+  app.web:
+    image: webdevops/php-nginx:7.2-alpine
+    container_name: app.web
+    restart: always
+    volumes:
+      - ./www:/app
+      - ./config/phpmyadmin.conf:/opt/docker/etc/nginx/vhost.common.d/phpmyadmin.conf
+    ports:
+      - 80:80
+    networks:
+      - webapps-net
+
+# Database -----------------------------------------------------------
+  db.web:
+    image: mysql:8.0
+    container_name: db.web
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword
+    volumes:
+      - db-webapps:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    networks:
+      - webapps-net
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: myadmin
+    environment:
+      PMA_HOST: db.web
+      PMA_ABSOLUTE_URI: http://localhost/phpmyadmin
+    networks:
+      - webapps-net
+
+networks:
+  webapps-net:
+
+volumes:
+  db-webapps:
